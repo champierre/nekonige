@@ -12,558 +12,170 @@
 
 プログラミングソフト「[スクラッチ(Scratch)](https://scratch.mit.edu/)を使ってつくることができる、マウスでネズミを操作して、追ってくるネコから逃げるゲームです。
 
+<div class="flex justify-center">
+　　<img src="/nekonige.png" style="width: 50%">
+</div>
+
+<!--
+プログラミングソフト「スクラッチ(Scratch)」を使い、自分でプログラムを組んで、ゲームを作るワークショップ。メモはワークショップを進行するファシリテーター向けに書かれている。このワークショップは初心者を対象に最短で30分、発展を入れて2時間くらいまで対応する。
+-->
+
+---
+
+# Scratch の起動
+
+https://scratch.mit.edu/ をブラウザで開きます。
 
 <div class="flex justify-center">
-　　<img src="nekonige.png" style="width: 50%">
+　　<img src="/scratch.png" style="width: 50%">
 </div>
 
 ---
 
-# Navigation
+# 用語の説明
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|     |     |
+| 用語 | 説明 |
 | --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+| スプライト | キャラクター(役者)となるオブジェクト |
+| カテゴリー | ブロック(命令)の分類 |
+| ステージ | スプライトがスクリプトにしたがって動く舞台 |
+| ブロックパレット | 選択されたカテゴリーのブロック一覧 |
+| スクリプトエリア | スクリプト(スプライトの台本。プログラム)を組み立てる場所 |
+| コスチューム | スプライトの見た目を決める絵(衣装) |
 
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover![^1]
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn More](https://sli.dev/guide/animations#click-animations)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
 
 ---
 layout: center
-class: text-center
 ---
 
-# Learn More
+# かんたんなプログラミング(ネコ歩き)
+---
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+# プログラミングを始める
+
+左上のメニューから「作る」を選びます。
+
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/start_program.png" style="width: 50%">
+</div>
+
+<!--
+全員の状態を一致させるため、ウィンドウの一番上の左の方にある「作る」を選ぶ(これに限らず、「ここ」「そこ」などの指示代名詞はなるべく使わない。指示は一度だけでなく、何度も繰り返す)。ファシリテーターは初期画面(「動き」カテゴリーが選ばれ、スクリプトが空で、ステージの中央にネコがいる状態)になっていることを確認する。
+-->
+
+---
+
+# 10歩動かす
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/move.png" style="width: 30%">
+</div>
+
+<!--
+スプライト(ネコ)への最初の命令として、左のブロックがたくさん並んでいるところ(ブロックパレット)から青色の「10歩動かす」のブロックをクリック。
+
+ステージのネコを観察して、どこが変わったかを子供に聞く(ちょっと右に動いた)。
+
+ネコの1歩は1ドットに等しい(必要に応じてドットの意味も説明。プロジェクタ－ならドットを目視できるので、実際に見させても良い)。クリックするたびに10ドット右に進む。
+
+ネコが画面からはみ出すまで何度もクリックさせる(ポイントはわざと面倒な事をさせること)。
+
+見えなくなったら、ネコの尻尾をマウスでドラッグして、ステージの中央に戻す。
+
+ファシリテーターは、子供たちをよく観察して、この時点でドラッグ、クリックが難しそうな子をサポート(その場合もなるべく手出しはせず、説明してその子にやらせる)。
+-->
+---
+
+# ずっと10歩動かす
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/forever.png" style="width: 30%">
+</div>
+
+<!--
+これでも動かせるけど、指が疲れるので、ネコが勝手に動くようにしたい。そこで、「プログラム」を作る。プログラムは命令を順番に並べたもの。コードと同じ意味。
+
+そのためには、「10歩動かす」のブロックをドラッグして、画面の真ん中(スクリプトエリア)に持ってくる。これだけでは、まだなにも変わらない。ブロックをクリックすると動くだけ。
+
+つぎに、「制御」(上から4番目、オレンジ色)をクリックし、「ずっと」のブロックを真ん中(スクリプトエリア)にドラッグし、「10歩動かす」のブロックをはさむ(近づけるとC字型の口の部分が開く)。
+
+「ずっと」をクリックすると、ネコが勝手に動いて画面からいなくなる。尻尾をドラッグして戻しても、またすぐに動き出す。
+
+動きを止めるには画面右上の赤い八角形のボタン(赤信号)をクリックする。ネコが止まったらドラッグして、ステージの中央に戻す。これで最初のプログラムができた(さきほどの手動操作と対比させる)。
+
+ファシリテーターはそれぞれのステップで子供たちの足並みが揃っているかを常に確認し、遅れていたら適宜サポート。
+-->
+---
+
+# 緑の旗がクリックされたとき
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/green_flag.png" style="width: 30%">
+</div>
+
+<!--
+赤信号が止まれなら、その隣の緑の旗のボタンをクリックすると動きそうだけど、動かない。
+
+これを動かすには、「緑の旗がクリックされたとき」ブロックを「ずっと」の上に付ける。ブロックをドラッグして近づけると、白いハイライトが表示されるので、そこで離すと合体する。
+-->
+---
+
+# もし端についたら、跳ね返る
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/bounce.png" style="width: 30%">
+</div>
+
+<!--
+今度は、行きっぱなしのネコが自動的に戻ってくるようにしたい。そのためには、「動き」カテゴリーの「もし端についたら、跳ね返る」ブロックを「ずっと」の中、「10歩動かす」の下に入れる。
+
+緑の旗をクリックするとネコがステージを左右に往復する。
+-->
+
+---
+
+# 左右に反転
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/direction.png" style="width: 25%">
+</div>
+
+<!--
+(なにか変なことがないか聞く)ネコが右から左に進むとき、ひっくり返るのが変なので、画面右下、「向き」の下のテキストボックスをクリックし、真ん中の「◀|▶」(左右に反転するだけ)ボタンをクリックする。
+-->
+---
+
+# 次のコスチュームにする
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/next_costume.png" style="width: 30%">
+</div>
+
+<!--
+(まだ変なことがないか聞く)よく見ると、ネコの足が動いていない。これを動くようにしたい。
+
+まず、赤信号をクリックして動きを止める。
+
+画面左上、「コード」の右に「コスチューム」というタブがある。これをクリックするとスクリプトエリアが切り替わり、ネコの絵が2枚表示される。これがネコの衣装(コスチューム)。絵のアイコンをクリックすると、ステージのネコの絵が切り替わる。この切り替えを高速で行えば、パラパラマンガのように、足が動いて見えるのではないか。
+
+「コード」タブをクリックして画面を戻し、カテゴリーを「見た目」(左の上から2段目。紫色)に切り替え、「次のコスチュームにする」ブロックをクリックしてみる。すると、ネコの絵が切り替わる。つまり、このブロックをスクリプトの「ずっと」のなかに入れれば、動いて見えるはず。「次のコスチュームにする」を画面の真ん中(スクリプトエリア)にドラッグして、「ずっと」の中、「もし端についたら、跳ね返る」の下に付ける。
+
+緑の旗をクリックすると足を動かしながらネコが動き始める。
+-->
+---
+
+# 向きを変える
+
+<div class="flex justify-center" style="margin-top: 100px;">
+　　<img src="/change_direction.png" style="width: 25%">
+</div>
+
+<!--
+ネコが左右に動くだけでは面白く無いので、ステージ全体を動きまわるようにしたい。そのためにはネコの向きを変えれば良い。画面右下、「向き」の下のテキストボックスをクリックして表示される吹き出しのなかの矢印がネコの向きを示しているので、この矢印をドラッグしてネコの向きを変える。
+-->
+---
+layout: center
+---
+
+# ネコから逃げろ！ゲームのつくり方　
+---
