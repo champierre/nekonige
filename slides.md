@@ -67,7 +67,7 @@ layout: center
 
 # 10歩動かす
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/move.png" style="width: 30%">
 </div>
 
@@ -88,7 +88,7 @@ layout: center
 
 # ずっと10歩動かす
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/forever.png" style="width: 30%">
 </div>
 
@@ -109,7 +109,7 @@ layout: center
 
 # 緑の旗がクリックされたとき
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/green_flag.png" style="width: 30%">
 </div>
 
@@ -122,7 +122,7 @@ layout: center
 
 # もし端についたら、跳ね返る
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/bounce.png" style="width: 30%">
 </div>
 
@@ -136,7 +136,7 @@ layout: center
 
 # 左右に反転
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/direction.png" style="width: 25%">
 </div>
 
@@ -147,7 +147,7 @@ layout: center
 
 # 次のコスチュームにする
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/next_costume.png" style="width: 30%">
 </div>
 
@@ -166,7 +166,7 @@ layout: center
 
 # 向きを変える
 
-<div class="flex justify-center" style="margin-top: 100px;">
+<div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/change_direction.png" style="width: 25%">
 </div>
 
@@ -179,3 +179,81 @@ layout: center
 
 # ネコから逃げろ！ゲームのつくり方　
 ---
+
+# ネズミのスプライトを追加する
+
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/mouse.png">
+</div>
+
+<!--
+ネコを動かすことができたので、このネコから逃げるゲームを作る。ネコから逃げるものといえば(参加者に問いかける)、やっぱりネズミなのでそのキャラクター(スプライト)を新しく登場させる。
+
+そのためには、スプライトエリアの右下の「スプライトを選ぶ」(ネコとその右上にプラスマークがついたアイコン)をクリックする。
+
+「スプライトを選ぶ」画面が開いたら、検索フィールドの右「すべて」の横の「動物」を選び、続いて下にスクロールさせて「Mouse1」をクリックしてから「OK」ボタンをクリックする。するとステージにネズミが現れる(「でかい」というリアクションが返るはず)
+-->
+
+---
+
+# ネズミの大きさを小さくする
+
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/mouse_size.png" style="width: 60%">
+</div>
+
+<!--
+ネズミがちょっと大きすぎるので小さくする。スプライトエリアのMouse1が選ばれているのを確認して、「大きさ」の下のテキストボックスをクリックする。数字を100より小さくすればもとの大きさより小さくなる。50くらいがちょうどよい。
+-->
+
+---
+
+# ネズミの動きをプログラムする
+
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/mouse_program.png" style="width: 40%">
+</div>
+
+<!--
+ネズミの動きをプログラムする。ほぼ同じプログラムになるので、ネコのプログラムをまねしてひとつひとつブロックをつなげていくのもよいが、今後も使うことを考えてプログラムをほかのスプライトにコピーする技を教える。
+
+スプライトエリアでネコをクリックし、ネコのプログラムを表示する。「緑の旗がクリックされたとき」の上部あたりにマウスカーソルを乗せ、プログラム全体をつかんで、スプライトエリアのネズミのところまでドラッグする。マウスカーソルがちょうどネズミの上に乗るあたりで、スプライトがぶるぶるっとふるえる動きをするので、ちょうどその場所で離すとコピーすることができる。
+
+緑の旗をクリックするとネズミも足を動かしながら動くことを確認する。
+
+ネズミは自分のキャラクター(自キャラ)なので、コントロールできるようにしたい。ここでは、マウスの操作でステージの中を動かせるようにしてみる。動かすのだからそのブロックは「動き」カテゴリーにあるはず。切り替えると上から9番目に「マウスのポインターへ向ける」というブロックがある。マウスのポインターとはマウスの矢印、カーソルのこと。このブロックを「ずっと」の中、「次のコスチュームにする」の下にドラッグしてはめる。これでよさそうなので、緑の旗をクリックしてみる。ネコが動き、ネズミをマウスでコントロールできる。
+-->
+
+---
+
+# ネズミがネコに捕まるとはどういうことか？
+
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/capture.png">
+</div>
+
+<!--
+しかし、ネズミがネコに捕まってもなにも起こらない。そこはまだプログラムしていないから。次にそれをプログラムする。その前に、ネズミがネコに捕まるとはどういうことか考える(問いかけ)。赤信号で止めてから、ステージ上のネコとネズミが離れた位置にドラッグしてみる。これは捕まっていない。次に、ネコとネズミが重なった(触れた)状態にしてみる。これは捕まっている。つまり、ネコとネズミが触れているかどうかを調べることができれば、捕まったかどうか分かる。それには「調べる」カテゴリーのブロックを使う。
+-->
+
+---
+
+# (オレンジ)色に触れた
+
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/orange.png" style="width: 40%">
+</div>
+
+<!--
+ブロックは沢山あるけれども、ここではネズミから見た時のネコの色(オレンジ色)に注目し、上から2番目の「■色に触れた」を使う。■をクリックすると、色を選択できる吹き出しが表示される。吹き出しの中、3種類のスライダの下にスポイトのアイコンがあるので、それを選択すると、ステージエリアがハイライトされる。ステージの中のマウスがあたっている部分の色を吸い取ることができるようになった。ネコの（白い部分ではなく）オレンジ色の上でクリックする。すると、その色が吸い取られて■の色がオレンジに変わる。
+
+このブロックをスクリプトの中で使いたいけれども、このブロックは両端が尖った六角形なので、はめられる場所がない。それなので、とりあえず真ん中のスクリプトエリアにドラッグしておく。
+-->
+
+---
+
+#
+
+<!--
+次に、ネコがネズミに捕まったとき(触れたとき)にどうなるか考える(問いかけ)。そのときは、ゲームが終了、つまり、ゲームオーバーになる。ゲームオーバーはゲームが止まって、操作しても動かなくなる状態のこと。赤信号のボタンを押した時と同じ。これを代わりに押してくれるブロックを使えば良い。「制御」の下の方にある「すべてを止める」がそれ。これもまだはめられる場所がないので、とりあえず真ん中のスクリプトエリアにドラッグしておく。
+-->
