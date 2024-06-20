@@ -68,7 +68,7 @@ layout: center
 # 10歩動かす
 
 <div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/move.png" style="width: 30%">
+　　<img src="/move.png" style="width: 50%">
 </div>
 
 <!--
@@ -89,7 +89,7 @@ layout: center
 # ずっと10歩動かす
 
 <div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/forever.png" style="width: 30%">
+　　<img src="/forever.png" style="width: 50%">
 </div>
 
 <!--
@@ -110,7 +110,7 @@ layout: center
 # 緑の旗がクリックされたとき
 
 <div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/green_flag.png" style="width: 30%">
+　　<img src="/green_flag.png" style="width: 50%">
 </div>
 
 <!--
@@ -123,7 +123,7 @@ layout: center
 # もし端についたら、跳ね返る
 
 <div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/bounce.png" style="width: 30%">
+　　<img src="/bounce.png" style="width: 50%">
 </div>
 
 <!--
@@ -137,7 +137,7 @@ layout: center
 # 左右に反転
 
 <div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/direction.png" style="width: 25%">
+　　<img src="/direction.png" style="width: 30%">
 </div>
 
 <!--
@@ -147,8 +147,8 @@ layout: center
 
 # 次のコスチュームにする
 
-<div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/next_costume.png" style="width: 30%">
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/next_costume.png" style="width: 50%">
 </div>
 
 <!--
@@ -166,8 +166,8 @@ layout: center
 
 # 向きを変える
 
-<div class="flex justify-center" style="margin-top: 50px;">
-　　<img src="/change_direction.png" style="width: 25%">
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/change_direction.png" style="width: 30%">
 </div>
 
 <!--
@@ -240,7 +240,7 @@ layout: center
 
 # (オレンジ)色に触れた
 
-<div class="flex justify-center" style="margin-top: 30px;">
+<div class="flex justify-center" style="margin-top: 20px;">
 　　<img src="/orange.png" style="width: 40%">
 </div>
 
@@ -252,7 +252,11 @@ layout: center
 
 ---
 
-#
+# すべてを止める
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/stop_all.png" style="width: 45%">
+</div>
 
 <!--
 次に、ネコがネズミに捕まったとき(触れたとき)にどうなるか考える(問いかけ)。そのときは、ゲームが終了、つまり、ゲームオーバーになる。ゲームオーバーはゲームが止まって、操作しても動かなくなる状態のこと。赤信号のボタンを押した時と同じ。これを代わりに押してくれるブロックを使えば良い。「制御」の下の方にある「すべてを止める」がそれ。これもまだはめられる場所がないので、とりあえず真ん中のスクリプトエリアにドラッグしておく。
