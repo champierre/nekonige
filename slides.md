@@ -1,10 +1,21 @@
 # ネコから逃げろ！ゲーム
 
-この文書は[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.ja)にしたがって公開します。
+この文書は[阿部 和広](https://x.com/abee2)氏によってScratch 1.4向けにに書かれた[「ネコから逃げろ！ゲームを使ったスクラッチワークショップ」](https://swikis.ddo.jp/abee/77)をScratch 3向けに、[石原 淳也](https://x.com/jishiha)がリミックス(加筆・修正)したものである。
+
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja"><img src="/by-sa.webp" style="width: 10%"></a>
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)にしたがって公開します。
+
+<kbd>←</kbd> で戻る。<kbd>→</kbd> で進む。
+
+---
+
+# ファシリテーターの皆さんへ
 
 ナビゲーションバー(ページの左下にマウスを移動すると表示されます)からプレゼンテーションモードに切り替えると、ワークショップを進行するファシリテーター向けのメモを表示します。
 
-<kbd>←</kbd> で戻る。<kbd>→</kbd> で進む。
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/presenter_mode.png">
+</div>
 
 ---
 
@@ -24,11 +35,13 @@
 
 # Scratch の起動
 
-https://scratch.mit.edu/ をブラウザで開きます。
-
 <div class="flex justify-center">
 　　<img src="/scratch.png" style="width: 50%">
 </div>
+
+<!--
+https://scratch.mit.edu/ をブラウザで開きます。
+-->
 
 ---
 
@@ -53,8 +66,6 @@ layout: center
 
 # プログラミングを始める
 
-左上のメニューから「作る」を選びます。
-
 <div class="flex justify-center" style="margin-top: 50px;">
 　　<img src="/start_program.png" style="width: 50%">
 </div>
@@ -67,8 +78,8 @@ layout: center
 
 # 10歩動かす
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/move.png" style="width: 30%">
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/move.png" style="width: 50%">
 </div>
 
 <!--
@@ -88,8 +99,8 @@ layout: center
 
 # ずっと10歩動かす
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/forever.png" style="width: 30%">
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/forever.png" style="width: 50%">
 </div>
 
 <!--
@@ -109,8 +120,8 @@ layout: center
 
 # 緑の旗がクリックされたとき
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/green_flag.png" style="width: 30%">
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/green_flag.png" style="width: 50%">
 </div>
 
 <!--
@@ -122,8 +133,8 @@ layout: center
 
 # もし端についたら、跳ね返る
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/bounce.png" style="width: 30%">
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/bounce.png" style="width: 50%">
 </div>
 
 <!--
@@ -136,8 +147,8 @@ layout: center
 
 # 左右に反転
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/direction.png" style="width: 25%">
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/direction.png" style="width: 30%">
 </div>
 
 <!--
@@ -147,8 +158,8 @@ layout: center
 
 # 次のコスチュームにする
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/next_costume.png" style="width: 30%">
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/next_costume.png" style="width: 50%">
 </div>
 
 <!--
@@ -166,8 +177,8 @@ layout: center
 
 # 向きを変える
 
-<div class="flex justify-center" style="margin-top: 100px;">
-　　<img src="/change_direction.png" style="width: 25%">
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/change_direction.png" style="width: 30%">
 </div>
 
 <!--
@@ -179,3 +190,294 @@ layout: center
 
 # ネコから逃げろ！ゲームのつくり方　
 ---
+
+# ネズミのスプライトを追加する
+
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/mouse.png">
+</div>
+
+<!--
+ネコを動かすことができたので、このネコから逃げるゲームを作る。ネコから逃げるものといえば(参加者に問いかける)、やっぱりネズミなのでそのキャラクター(スプライト)を新しく登場させる。
+
+そのためには、スプライトエリアの右下の「スプライトを選ぶ」(ネコとその右上にプラスマークがついたアイコン)をクリックする。
+
+「スプライトを選ぶ」画面が開いたら、検索フィールドの右「すべて」の横の「動物」を選び、続いて下にスクロールさせて「Mouse1」をクリックしてから「OK」ボタンをクリックする。するとステージにネズミが現れる(「でかい」というリアクションが返るはず)
+-->
+
+---
+
+# ネズミの大きさを小さくする
+
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/mouse_size.png" style="width: 60%">
+</div>
+
+<!--
+ネズミがちょっと大きすぎるので小さくする。スプライトエリアのMouse1が選ばれているのを確認して、「大きさ」の下のテキストボックスをクリックする。数字を100より小さくすればもとの大きさより小さくなる。50くらいがちょうどよい。
+-->
+
+---
+
+# ネズミの動きをプログラムする
+
+<div class="flex justify-center" style="margin-top: 30px;">
+　　<img src="/mouse_program.png" style="width: 40%">
+</div>
+
+<!--
+ネズミの動きをプログラムする。ほぼ同じプログラムになるので、ネコのプログラムをまねしてひとつひとつブロックをつなげていくのもよいが、今後も使うことを考えてプログラムをほかのスプライトにコピーする技を教える。
+
+スプライトエリアでネコをクリックし、ネコのプログラムを表示する。「緑の旗がクリックされたとき」の上部あたりにマウスカーソルを乗せ、プログラム全体をつかんで、スプライトエリアのネズミのところまでドラッグする。マウスカーソルがちょうどネズミの上に乗るあたりで、スプライトがぶるぶるっとふるえる動きをするので、ちょうどその場所で離すとコピーすることができる。
+
+緑の旗をクリックするとネズミも足を動かしながら動くことを確認する。
+
+ネズミは自分のキャラクター(自キャラ)なので、コントロールできるようにしたい。ここでは、マウスの操作でステージの中を動かせるようにしてみる。動かすのだからそのブロックは「動き」カテゴリーにあるはず。切り替えると上から9番目に「マウスのポインターへ向ける」というブロックがある。マウスのポインターとはマウスの矢印、カーソルのこと。このブロックを「ずっと」の中、「次のコスチュームにする」の下にドラッグしてはめる。これでよさそうなので、緑の旗をクリックしてみる。ネコが動き、ネズミをマウスでコントロールできる。
+-->
+
+---
+
+# ネズミがネコに捕まるとはどういうことか？
+
+<div class="flex justify-center" style="margin-top: 50px;">
+　　<img src="/capture.png">
+</div>
+
+<!--
+しかし、ネズミがネコに捕まってもなにも起こらない。そこはまだプログラムしていないから。次にそれをプログラムする。その前に、ネズミがネコに捕まるとはどういうことか考える(問いかけ)。赤信号で止めてから、ステージ上のネコとネズミが離れた位置にドラッグしてみる。これは捕まっていない。次に、ネコとネズミが重なった(触れた)状態にしてみる。これは捕まっている。つまり、ネコとネズミが触れているかどうかを調べることができれば、捕まったかどうか分かる。それには「調べる」カテゴリーのブロックを使う。
+-->
+
+---
+
+# (オレンジ)色に触れた
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/orange.png" style="width: 40%">
+</div>
+
+<!--
+ブロックは沢山あるけれども、ここではネズミから見た時のネコの色(オレンジ色)に注目し、上から2番目の「■色に触れた」を使う。■をクリックすると、色を選択できる吹き出しが表示される。吹き出しの中、3種類のスライダの下にスポイトのアイコンがあるので、それを選択すると、ステージエリアがハイライトされる。ステージの中のマウスがあたっている部分の色を吸い取ることができるようになった。ネコの（白い部分ではなく）オレンジ色の上でクリックする。すると、その色が吸い取られて■の色がオレンジに変わる。
+
+このブロックをスクリプトの中で使いたいけれども、このブロックは両端が尖った六角形なので、はめられる場所がない。それなので、とりあえず真ん中のスクリプトエリアにドラッグしておく。
+-->
+
+---
+
+# すべてを止める
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/stop_all.png" style="width: 45%">
+</div>
+
+<!--
+次に、ネコがネズミに捕まったとき(触れたとき)にどうなるか考える(問いかけ)。そのときは、ゲームが終了、つまり、ゲームオーバーになる。ゲームオーバーはゲームが止まって、操作しても動かなくなる状態のこと。赤信号のボタンを押した時と同じ。これを代わりに押してくれるブロックを使えば良い。「制御」の下の方にある「すべてを止める」がそれ。これもまだはめられる場所がないので、とりあえず真ん中のスクリプトエリアにドラッグしておく。
+-->
+
+---
+
+# もし〜なら
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/if.png" style="width: 45%">
+</div>
+
+<!--
+これで必要なブロックが揃ったので、これらをつなぎたい。そのためのブロックはないだろうか。そこで、左に並んでいる制御のブロックをみてみると、六角形の穴が開いたブロックがいくつかある。その中でも、「もし〜なら」というブロックが使えそうだ。これも真ん中の灰色の空いているところにドラッグする。
+-->
+
+---
+
+# もしオレンジ色に触れたなら、すべてを止める
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/if_orange_stop_all.png" style="width: 45%">
+</div>
+
+<!--
+「もし〜なら」の六角形の穴に「■(オレンジ)色に触れた」をドラッグしてはめる。すると、「もし■(オレンジ)色に触れたなら」になる。続いて、「すべてを止める」を「もし■(オレンジ)色に触れたなら」の開いた口にはめる。すると、「もし■(オレンジ)色に触れたなら、すべてを止める」となる。
+-->
+
+---
+
+# 全部のブロックを合体
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/mouse_code.png" style="width: 40%">
+</div>
+
+<!--
+ここまでできたら、全部のブロックを合体させる。「もし■(オレンジ)色に触れたならすべてを止める」の「もし」あたりをつかんでドラッグして、「ずっと」の中の一番下にはめる。コード全体を読むと、「緑の旗がクリックされたとき、ずっと、(いろんなことをしたあと)、もし■(オレンジ)色に触れたなら、すべてを止める」となる。これでネズミのコードは完成した。
+-->
+
+---
+
+# 遊んでみよう
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/play.gif" style="width: 50%">
+</div>
+
+<!--
+さっそく、緑の旗をクリックして遊んでみよう。ネコに捕まらないようにマウスを操作してネズミを動かす。ネコに捕まると全体が止まる(ゲームオーバー)。再開するには再度緑の旗を押す。(遊ぶ時間は数分程度。状況を見て判断)
+-->
+
+---
+
+# ネコを増やす
+
+<div class="flex justify-center" style="margin-top: 20px;">
+　　<img src="/duplicate.png" style="width: 40%">
+</div>
+
+<!--
+これが簡単すぎるようなら、ネコを増やすと良い。ネコは複製(影分身)できる。スプライトエリアのネコの上で右クリックして「複製」を選ぶと、ネコが増える。ネコの数は全部で2匹から3匹がおすすめ。それ以上だと、難しくなりすぎる。(同じく遊ぶ時間は状況を見て判断)
+-->
+
+---
+
+# ネコの速さを変える
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/change_speed.png">
+</div>
+
+<!--
+また、それぞれのネコの速さを変えても良い。変えたいネコをスプライトエリカの上で選んでから、スクリプトの「10歩動かす」の数字をクリックして、キーボードから数字を入力し、最後にEnterキーを押すと、そのネコの速さが変わる。またスクリプトエリア右上に表示されている「向き」の値を変えると、そのネコの向きが変わる。複数のネコの動きを別々にすると難しくなる。(同じく遊ぶ時間は状況を見て判断)
+-->
+
+---
+
+# 背景を変える
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/stage.png" style="width: 30%">
+</div>
+
+<!--
+ステージが真っ白でさびしいので、背景をつけてみる。左上の「背景」のタブを選んだ後、左下の「背景を選ぶ」アイコンをクリックする。「背景を選ぶ」画面に表示された背景の中から好きな背景をクリックして選ぶと、その背景がステージにセットされる。
+-->
+
+---
+
+# 発表モード
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/presentation.png" style="width: 50%">
+</div>
+
+<!--
+このゲームで遊ぶには、ステージを全画面にするとよい。それにはステージの右上にある4つの矢印が外側に向いたボタンをクリックする(発表モード)。この状態で緑の旗をクリックすると全画面でゲームがスタートする。発表モードを抜けるには、右上の4つの矢印が内側に向いたボタンをクリックする。(遊ぶ時間は状況を見て判断)
+-->
+
+---
+
+# プロジェクトの保存
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/save.png" style="width: 50%">
+</div>
+
+<!--
+せっかく作ったゲームもスクラッチを終了したり、パソコンのスイッチを切ると消えてしまう。そうならないように保存する。「ファイル」メニューから「コンピューターに保存する」を選ぶと「Scratchのプロジェクト.sb3」というファイル名で保存される。ファイル名は、本来はその作品に合った名前を付けるべきだが、ワークショップでは、日付、ニックネーム、下の名前など、統一したルールを決めておくとスムーズ。その際、個人情報に留意すること。
+
+キーボード入力は、なるべく自力でやらせるようにするが、どうしても難しい子は手伝う。ファイル名は紙に記録させ、持ち帰って自宅や学校などで続けられるようにする。
+
+保存したプロジェクトは「ファイル」メニューの「コンピューターから読み込む」から再び開くことができる。
+-->
+
+---
+
+# 改造タイム
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/plus.png" style="width: 50%">
+</div>
+
+<!--
+この後、時間が余れば、キャラクターの絵を描きかえたり(コスチュームタブのペイントボタン。色に注意)、効果音を入れたり(音タブの録音や読み込みボタン)、スコアやタイマーを追加したりする(「変数」カテゴリー)。何をやるかは状況(子供たちの関心やノリ)で判断する。
+-->
+
+---
+
+# スコア
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/score.png" style="width: 50%">
+</div>
+
+<!--
+スコアを作るには、一番右下のステージエリアの「背景」クリックしてから、「変数」カテゴリーの「変数を作る」ボタンで「スコア」を追加する。変数関連のブロックが自動的に増え、ステージに「スコア」が表示される。
+-->
+
+---
+
+# スコアのコード
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/score_code.png" style="width: 40%">
+</div>
+
+<!--
+「緑を旗をクリックしたとき」「ずっと」をつないだ基本のスクリプトを作り、「変数」に戻って、「スコアを0にする」を「緑を旗をクリックしたとき」と「ずっと」の間に入れる。「スコアを1ずつ変える」と「1秒待つ」を「ずっと」の中に入れる。
+
+こうすることで、ゲームがスタートしてから1秒逃げ切れるごとに1点が加算されるゲームができあがる。
+-->
+
+---
+layout: center
+---
+
+# 作品の共有
+
+---
+
+# アカウントの作成
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/join.png" style="width: 40%">
+</div>
+
+<!--
+アカウントを作成しサインインすれば、作品は自動で保存されるようになり、「私の作品」の一覧画面からいつでも作品を呼び出せるようになって便利である。ただしScratchのアカウントを作るということは、コミュニティーの一員になることを意味する。保護者と一緒にコミュニティーガイドラインを読み、理解し、守ることをよく説明する。
+-->
+
+---
+
+# 共有、使い方やメモ、クレジット
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/description.png" style="width: 70%">
+</div>
+
+<!--
+プロジェクトページの右上「共有」ボタンをクリックすれば、完成した作品をインターネットで共有し、誰でもブラウザーから遊べるようになる。
+
+「使い方」にゲームの操作方法などその作品の利用方法（どのキーを押すなど）を書いておくと、他の子が遊びやすくて親切である。
+
+「メモとクレジット」には、どうやってこのプロジェクトを作成したのか？などのメモや、後述するリミックスをおこなった場合は、その作者への感謝や、どの部分を変更したのかなどを書いておくと良い。
+
+共有した作品は、自分のだけでなく、他の子の作品でも遊ぶように促す。
+-->
+
+---
+
+# リミックス
+
+<div class="flex justify-center" style="margin-top: 40px;">
+　　<img src="/remix.png" style="width: 50%">
+</div>
+
+<!--
+共有された他の人の作品は、「中を見る」でどのように作られているかその仕組みを知ることができたり、「リミックス」で直したりできる。変更したもの(リミックス)は再度共有できる。公開されたスクラッチ作品のライセンスははCC BY-SA(クリエイティブコモンズ 表示-継承)なので、他の人の作品をリミックスしてもよい(むしろそうすべき。パクリや盗作ではないことをきちんと説明する。詳細は「よくある質問」の[リミックスとコピー](https://scratch.mit.edu/faq#remix)の更を参照)。
+-->
+
+---
+layout: center
+---
+
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja"><img src="/by-sa.webp" style="width: 10%"></a>
+この文書は[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.ja)にしたがって公開します。
+
+Markdown形式だけで書ける[Slidev](https://ja.sli.dev/)というツールを使って作っており、GitHub(https://github.com/champierre/nekonige)でソースを公開しています。
+
+リミックス、間違いの指摘、改善提案など歓迎します。
