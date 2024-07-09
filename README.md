@@ -1,4 +1,4 @@
-# ネコから逃げろ！ゲーム
+# ネコから逃げろ！ゲーム(ネコ逃げ)
 
 **[ネコから逃げろ！ゲーム](https://champierre.github.io/nekonige)**
 
